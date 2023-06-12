@@ -36,3 +36,18 @@ paths:
             application/json:
               schema:
                 type: string
+  /technology/{name}:
+    get:
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successfully fetched
+          content:
+            application/json:
+              schema:
+                type: string

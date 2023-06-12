@@ -6,6 +6,7 @@ import bodyParser from "body-parser";
 import getDest from "./controllers/dest-controller.js";
 import swaggerMiddleware from "./middlewares/swg-midl.js";
 import getCrew from "./controllers/crew-controller.js";
+import getTech from "./controllers/tech-controller.js";
 
 const app = express();
 dotenv.config();
@@ -15,6 +16,7 @@ app.use(bodyParser.json());
 
 app.get("/destinations/:name", getDest);
 app.get("/crew/:name", getCrew);
+app.get("/technology/:name", getTech);
 app.use("/", ...swaggerMiddleware());
 
 app.listen(3000);
