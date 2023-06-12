@@ -1,0 +1,22 @@
+openapi: 3.0.0
+info:
+  title: SpaceTourism
+  description: Space Tourism api
+  version: 0.1.9
+
+paths:
+  /destinations/{name}:
+    get:
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        "200":
+          description: Successfully fetched
+          content:
+            application/json:
+              schema:
+                type: string
