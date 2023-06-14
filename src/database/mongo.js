@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
 
 const connect = () => {
-  const port = process.env.PORT || 3000;
+  const url = process.env.MONGO_URL;
 
   try {
-    mongoose.connect(port);
+    mongoose.connect(url);
   } catch (error) {
     console.log(error);
   }

@@ -19,4 +19,4 @@ app.get("/crew/:name", getCrew);
 app.get("/technology/:name", getTech);
 app.use("/", ...swaggerMiddleware());
 
-app.listen(port, "0.0.0.0");
+app.listen(3000);
