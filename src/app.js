@@ -19,6 +19,6 @@ app.get("/crew/:name", getCrew);
 app.get("/technology/:name", getTech);
 app.use("/", ...swaggerMiddleware());
 
-app.listen(MONGO_URL, "0.0.0.0", function () {
+app.listen(port, "0.0.0.0", function () {
   console.log("errors");
 });
