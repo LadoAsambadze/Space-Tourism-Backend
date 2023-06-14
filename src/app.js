@@ -13,10 +13,10 @@ dotenv.config();
 connect();
 app.use(cors());
 app.use(bodyParser.json());
-const port = process.env.MONGO_URL || 3000;
+
 app.get("/destinations/:name", getDest);
 app.get("/crew/:name", getCrew);
 app.get("/technology/:name", getTech);
 app.use("/", ...swaggerMiddleware());
 
-app.listen(port);
+app.listen(process.env.PORT || 3000);
